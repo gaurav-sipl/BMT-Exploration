@@ -1,0 +1,38 @@
+<div class="color-line"></div>
+<div ng-controller="LoginCtrl as logCtrl">
+  <div class="login-container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="text-center m-b-md">
+          <h1>BMT</h1>
+        </div>
+        <div class="hpanel">
+          <div class="panel-heading">Login</div>
+          <div class="panel-body">
+            <form role="form" name="login_form" ng-submit="logCtrl.login(email,password)" novalidate>
+              <div class="form-group">
+                <label class="control-label" for="email">Email</label>
+                <input type="email" placeholder="example@example.com" class="form-control" ng-model="email" name="email" required>
+                
+              <div class="form-group">
+                <label class="control-label" for="password">Password</label>
+                <input type="password" placeholder="******" required ng-model="password" name="password" id="password" class="form-control">
+              </div>
+
+            
+              <!-- <div class="col-md-5 link-forgot-password">
+                <a ui-sref="common.reset-password">Forgot password?</a>
+              </div> -->
+              <div class="col-md-12 text-center">
+                <!-- <a class="btn btn-success btn-block" href="#/dashboard">Login</a> -->
+                <button class="btn btn-success btn-block" title="Login" type="submit"  >Login</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+<toaster-container></toaster-container>
